@@ -1,0 +1,127 @@
+/* Chosen Palette: Calm Harmony */
+/* Background: #F8F8F8 (light neutral) */
+/* Primary Text: #333333 */
+/* Secondary Text/Subtle: #666666 */
+/* Accent/Highlight: #4A90E2 (subtle blue, used sparingly) */
+/* Card Background: #FFFFFF */
+/* Border/Separator: #EEEEEE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F8F8;
+    color: #333333;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    /* Max width to prevent charts from being too wide */
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    /* Base height, adjusted for responsiveness */
+    max-height: 450px;
+    /* Max height to prevent vertical overflow */
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .chart-container {
+        height: 400px;
+        max-height: 500px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .chart-container {
+        height: 450px;
+        max-height: 550px;
+    }
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Modal specific styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    /* Limit modal height */
+    overflow-y: auto;
+    /* Enable scrolling for long content */
+    position: relative;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-overlay.open .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666666;
+}
+img{width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
