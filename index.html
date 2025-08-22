@@ -9,26 +9,44 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="./public/favicon.jpg">
 </head>
 
 <body class="min-h-screen">
-    <!-- Navigation Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50 py-4">
-        <nav class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Responsive Navbar HTML -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center h-16 relative">
             <a href="#home" class="text-2xl font-bold text-gray-800 rounded-lg hover:text-blue-500 transition-colors">
                 Rohit Kumawat
             </a>
-            <div class="flex space-x-6">
-                <a href="#home" class="text-gray-600 hover:text-blue-500 font-medium transition-colors">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-500 font-medium transition-colors">About</a>
-                <a href="#skills" class="text-gray-600 hover:text-blue-500 font-medium transition-colors">Skills</a>
-                <a href="#projects" class="text-gray-600 hover:text-blue-500 font-medium transition-colors">Projects</a>
-                <!-- <a href="#experience"
-                    class="text-gray-600 hover:text-blue-500 font-medium transition-colors">Experience</a> -->
-                <a href="#contact" class="text-gray-600 hover:text-blue-500 font-medium transition-colors">Contact</a>
+            <!-- Hamburger Button -->
+            <button id="navbar-toggle" class="md:hidden block p-2 focus:outline-none" aria-label="Toggle navigation">
+                <span class="block w-7 h-1 bg-blue-500 rounded mb-1"></span>
+                <span class="block w-7 h-1 bg-blue-500 rounded mb-1"></span>
+                <span class="block w-7 h-1 bg-blue-500 rounded"></span>
+            </button>
+            <!-- Navbar Links -->
+            <div id="navbar-links"
+                class="flex space-x-6 md:flex md:space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent flex-col md:flex-row md:items-center shadow-md md:shadow-none transition-all duration-300 z-40 hidden md:flex">
+                <a href="#home"
+                    class="text-gray-600 hover:text-blue-500 font-medium transition-colors px-4 py-2 ms-6">Home</a>
+                <a href="#about"
+                    class="text-gray-600 hover:text-blue-500 font-medium transition-colors px-4 py-2">About</a>
+                <a href="#skills"
+                    class="text-gray-600 hover:text-blue-500 font-medium transition-colors px-4 py-2">Skills</a>
+                <a href="#projects"
+                    class="text-gray-600 hover:text-blue-500 font-medium transition-colors px-4 py-2">Projects</a>
+                <a href="#contact"
+                    class="text-gray-600 hover:text-blue-500 font-medium transition-colors px-4 py-2">Contact</a>
             </div>
         </nav>
     </header>
+    <!-- ...existing code... -->
+
+    <!-- Add this style block in <head> for mobile navbar animation -->
+    <style>
+
+    </style>
 
     <main class="container mx-auto px-4 py-8">
         <!-- Hero Section -->
@@ -54,12 +72,17 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div class="md:text-left text-center">
                     <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                        Hello, I'm Rohit Kumawat, a Full-Stack Web Developer specializing in the MERN stack. I build fast, responsive, and intuitive web applications for growing startups and companies.
-                        
+                        Hello, I'm Rohit Kumawat, a Full-Stack Web Developer specializing in the MERN stack. I build
+                        fast, responsive, and intuitive web applications for growing startups and companies.
+
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                        My mission is to build technology that is easy and enjoyable for everyone to use. I focus on solving real-world problems by automating manual processes, helping businesses save time and money. With a strong foundation in modern web technologies and practical experience from my internship at Upflair in Jaipur, I deliver reliable and efficient solutions. <br>
-                        When I'm not coding, I'm probably catching up on the latest from the Marvel Cinematic Universe (MCU).
+                        My mission is to build technology that is easy and enjoyable for everyone to use. I focus on
+                        solving real-world problems by automating manual processes, helping businesses save time and
+                        money. With a strong foundation in modern web technologies and practical experience from my
+                        internship at Upflair in Jaipur, I deliver reliable and efficient solutions. <br>
+                        When I'm not coding, I'm probably catching up on the latest from the Marvel Cinematic Universe
+                        (MCU).
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed font-bold">
                         Ready to build something great? Take a look at my portfolio to see my work.
@@ -69,8 +92,7 @@
                     <!-- Placeholder for a simple self-portrait icon or abstract shape using Unicode/HTML/CSS -->
                     <div
                         class="w-48 h-48 bg-gray-200 rounded-full flex items-center justify-center text-6xl text-gray-500 shadow-inner rounded-50% border border-2 border-gray-300">
-                        <img class="w-full h-full object-cover rounded-50%" src="profile.jpg" alt="">
-                        <!-- User icon emoji -->
+                        <img class="w-full h-full object-cover rounded-50%" src="./public/image/profile.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -153,7 +175,8 @@
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
                 <a href="mailto:rohitmaroth3@gmail.com"
-                    class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition-transform transform hover:scale-105 shadow-md" target="_blank">
+                    class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition-transform transform hover:scale-105 shadow-md"
+                    target="_blank">
                     Email Me
                 </a>
                 <a href="https://www.linkedin.com/in/rohit-kumawattt/" target="_blank"

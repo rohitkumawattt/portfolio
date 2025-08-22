@@ -263,7 +263,7 @@ function renderProjects() {
         projectCard.className = 'bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow cursor-pointer';
         projectCard.setAttribute('data-project-id', project.id);
         projectCard.innerHTML = `
-                    <div class="w-24 text-6xl text-blue-500 mb-4"><img src="SymptoScope_logo.png" alt="SymptoScope Logo"></div>
+                    <div class="w-24 text-6xl text-blue-500 mb-4"><img src="./public/image/SymptoScope_logo.png" alt="SymptoScope Logo"></div>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">${project.title}</h3>
                     <p class="text-gray-700 text-base mb-4 line-clamp-3">${project.description}</p>
                     <div class="mt-auto">
@@ -394,3 +394,24 @@ window.onload = function () {
         content.style.maxHeight = null;
     });
 };
+
+
+const toggleBtn = document.getElementById('navbar-toggle');
+const links = document.getElementById('navbar-links');
+toggleBtn.addEventListener('click', () => {
+    links.classList.toggle('open');
+    if (links.classList.contains('open')) {
+        links.style.display = 'flex';
+    } else {
+        links.style.display = 'none';
+    }
+});
+// Hide menu on resize to desktop
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+        links.style.display = 'flex';
+        links.classList.remove('open');
+    } else if (!links.classList.contains('open')) {
+        links.style.display = 'none';
+    }
+});
